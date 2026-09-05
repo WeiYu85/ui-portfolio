@@ -48,84 +48,131 @@ export const INITIAL_DATABASE: DatabaseSchema = {
     ]
   },
   messages: [],
-  projects: [
+  "projects": [
     {
-      id: 'proj-1',
-      slug: 'aetheria-2088-tactical-hud',
-      title: 'AETHERIA: 2088',
-      subtitle: 'Tactical Extraction Shooter HUD & Holographic Inventory',
-      device: 'PC / Desktop',
-      heroImage: SEED_MOCKUPS.aetheriaHero,
-      thumbnailImage: SEED_MOCKUPS.aetheriaHero,
-      images: [SEED_MOCKUPS.aetheriaHero, SEED_MOCKUPS.aetheriaWireframe, SEED_MOCKUPS.designSystemHero],
-      featured: true,
-      order: 1,
-      overview: 'Full in-game HUD system for a dystopian sci-fi extraction shooter. Covers ammo telemetry, compass, biological vitals, quick-loot radial, and holographic backpack inventory — all engineered as adaptive, context-aware diegetic layers.'
+      "title": "FPS Game",
+      "subtitle": "",
+      "slug": "fps-game",
+      "device": "PC / Desktop",
+      "heroImage": "/uploads/fps_1_1788601511030_c9egu.jpg",
+      "thumbnailImage": "/uploads/fps_1_1788601511030_c9egu.jpg",
+      "images": [
+        "/uploads/fps_1_1788601511030_c9egu.jpg",
+        "/uploads/fps_2_1788601513464_4i31f.jpg",
+        "/uploads/fps_3_1788601515773_p2cpd.jpg",
+        "/uploads/fps_4_1788601518107_96ago.jpg"
+      ],
+      "overview": "UI I made for an FPS game",
+      "featured": true,
+      "id": "proj-1788601531314",
+      "order": 1
     },
     {
-      id: 'proj-2',
-      slug: 'valkyrie-shadowfall-rpg-ui',
-      title: 'VALKYRIE: SHADOWFALL',
-      subtitle: 'Dark Fantasy RPG Equipment Matrix & Diegetic Rune Wheel',
-      device: 'Console (PS5 / Xbox)',
-      heroImage: SEED_MOCKUPS.valkyrieHero,
-      thumbnailImage: SEED_MOCKUPS.valkyrieHero,
-      images: [SEED_MOCKUPS.valkyrieHero, SEED_MOCKUPS.aetheriaWireframe, SEED_MOCKUPS.designSystemHero],
-      featured: true,
-      order: 2,
-      overview: 'Complete UI overhaul for a premier dark fantasy RPG. Equipment screen, socketed rune-crafting matrix, progressive lore viewer, and gamepad-optimized quick-swap d-pad wheel — all built on a gothic gold-trimmed vector framework.'
+      "title": "Minimalist flat UI design",
+      "subtitle": "",
+      "slug": "minimalist-flat-ui-design",
+      "device": "PC / Desktop",
+      "heroImage": "/uploads/genshin_1_1788601540053_agszq.png",
+      "thumbnailImage": "/uploads/genshin_1_1788601540053_agszq.png",
+      "images": [
+        "/uploads/genshin_1_1788601540053_agszq.png",
+        "/uploads/genshin_2_1788601542153_ymc0z.png",
+        "/uploads/genshin_3_1788601545131_qk7mw.png"
+      ],
+      "overview": "Minimalist flat UI design, inspired by Genshin Impact",
+      "featured": true,
+      "id": "proj-1788601610936",
+      "order": 2
     },
     {
-      id: 'proj-3',
-      slug: 'cyberstrike-apex-mobile-ui',
-      title: 'CYBERSTRIKE: APEX',
-      subtitle: 'Mobile Battle Royale HUD & Custom Touch Layout',
-      device: 'Mobile (iOS / Android)',
-      heroImage: SEED_MOCKUPS.cyberstrikeHero,
-      thumbnailImage: SEED_MOCKUPS.cyberstrikeHero,
-      images: [SEED_MOCKUPS.cyberstrikeHero, SEED_MOCKUPS.aetheriaWireframe],
-      featured: true,
-      order: 3,
-      overview: 'Complete mobile touch interface and responsive safe-zone HUD layout for a high-intensity battle royale. Includes a fully customizable in-game HUD editor allowing players to reposition and rescale every element.'
+      "title": "Simulator UI",
+      "subtitle": "",
+      "slug": "simulator-ui",
+      "device": "PC / Desktop",
+      "heroImage": "/uploads/simulator_shop_1788601625316_5mc5o.png",
+      "thumbnailImage": "/uploads/simulator_shop_1788601625316_5mc5o.png",
+      "images": [
+        "/uploads/simulator_shop_1788601625316_5mc5o.png"
+      ],
+      "overview": "UI for a simulator game",
+      "featured": true,
+      "id": "proj-1788601641784",
+      "order": 3
     },
     {
-      id: 'proj-4',
-      slug: 'project-nebula-space-sim-ui',
-      title: 'PROJECT NEBULA',
-      subtitle: '4X Galactic Fleet Strategy Star Map & Command Console',
-      device: 'PC / Desktop',
-      heroImage: SEED_MOCKUPS.nebulaHero,
-      thumbnailImage: SEED_MOCKUPS.nebulaHero,
-      images: [SEED_MOCKUPS.nebulaHero, SEED_MOCKUPS.designSystemHero],
-      featured: false,
-      order: 4,
-      overview: 'High-density strategy UI for a galactic empire simulator. Hierarchical star map, resource economy graphs, shipyard production trees, and real-time fleet battle radar — designed with semantic zoom layers to prevent cognitive overload.'
+      "title": "RPG UI",
+      "subtitle": "",
+      "slug": "rpg-ui",
+      "device": "PC / Desktop",
+      "heroImage": "/uploads/rpg_1788601646777_boryo.png",
+      "thumbnailImage": "/uploads/rpg_1788601646777_boryo.png",
+      "images": [
+        "/uploads/rpg_1788601646777_boryo.png"
+      ],
+      "overview": "RPG-style UI",
+      "featured": true,
+      "id": "proj-1788601658457",
+      "order": 4
     },
     {
-      id: 'proj-5',
-      slug: 'neon-rogue-diegetic-deckbuilder',
-      title: 'NEON ROGUE',
-      subtitle: 'Cyberpunk Roguelike Card Battler Diegetic Terminal',
-      device: 'Handheld / Steam Deck',
-      heroImage: SEED_MOCKUPS.neonRogueHero,
-      thumbnailImage: SEED_MOCKUPS.neonRogueHero,
-      images: [SEED_MOCKUPS.neonRogueHero, SEED_MOCKUPS.aetheriaWireframe],
-      featured: false,
-      order: 5,
-      overview: 'Diegetic terminal UI for a cyberpunk roguelike. Cards are physical holographic memory chips inserted into a retro-futuristic CRT deck, with distinct color-coding for each card type and CRT scanline overlays.'
+      "title": "Health bar",
+      "subtitle": "",
+      "slug": "health-bar",
+      "device": "PC / Desktop",
+      "heroImage": "/uploads/health_bar_1788601668475_6lq22.jpg",
+      "thumbnailImage": "/uploads/health_bar_1788601668475_6lq22.jpg",
+      "images": [
+        "/uploads/health_bar_1788601668475_6lq22.jpg"
+      ],
+      "overview": "A health bar I made for a commission",
+      "featured": true,
+      "id": "proj-1788601674808",
+      "order": 5
     },
     {
-      id: 'proj-6',
-      slug: 'nexus-game-ui-design-system',
-      title: 'NEXUS UI SYSTEM',
-      subtitle: 'Universal Game UI Frame Architecture & Token Engine',
-      device: 'PC / Desktop',
-      heroImage: SEED_MOCKUPS.designSystemHero,
-      thumbnailImage: SEED_MOCKUPS.designSystemHero,
-      images: [SEED_MOCKUPS.designSystemHero, SEED_MOCKUPS.aetheriaHero, SEED_MOCKUPS.valkyrieHero],
-      featured: true,
-      order: 6,
-      overview: 'Universal 500+ component game UI library. Automated design token pipelines that export color ramps, typography, button state matrices, and focus rings directly into engine stylesheets — eliminating duplicate asset work across multi-platform pipelines.'
+      "title": "RPG inventory",
+      "subtitle": "",
+      "slug": "rpg-inventory",
+      "device": "PC / Desktop",
+      "heroImage": "/uploads/another_rpg_1788601681873_rd0ln.jpg",
+      "thumbnailImage": "/uploads/another_rpg_1788601681873_rd0ln.jpg",
+      "images": [
+        "/uploads/another_rpg_1788601681873_rd0ln.jpg"
+      ],
+      "overview": "Inventory UI with rpg-style",
+      "featured": true,
+      "id": "proj-1788601687610",
+      "order": 6
+    },
+    {
+      "title": "Mashle battleground UI",
+      "subtitle": "",
+      "slug": "mashle-battleground-ui",
+      "device": "PC / Desktop",
+      "heroImage": "/uploads/mashle_bg_1788601691538_oz5xt.png",
+      "thumbnailImage": "/uploads/mashle_bg_1788601691538_oz5xt.png",
+      "images": [
+        "/uploads/mashle_bg_1788601691538_oz5xt.png"
+      ],
+      "overview": "The UI I made for a Mashle battleground game",
+      "featured": true,
+      "id": "proj-1788601701240",
+      "order": 7
+    },
+    {
+      "title": "UI",
+      "subtitle": "",
+      "slug": "ui",
+      "device": "PC / Desktop",
+      "heroImage": "/uploads/triggerset_1788601995767_ayj7q.jpg",
+      "thumbnailImage": "/uploads/triggerset_1788601995767_ayj7q.jpg",
+      "images": [
+        "/uploads/triggerset_1788601995767_ayj7q.jpg"
+      ],
+      "overview": "The watermark was my old name, so don't mind it:)",
+      "featured": true,
+      "id": "proj-1788602002798",
+      "order": 8
     }
   ]
 };
