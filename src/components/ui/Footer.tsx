@@ -23,7 +23,7 @@ export function Footer() {
           </div>
           <div>
             <div className="font-mono text-sm font-black tracking-widest text-white">
-              NEXUS // WEIYU
+              NEXUS // VUX
             </div>
             <div className="text-[10px] font-mono text-slate-500">
               GAME UI/UX DESIGN & INTERFACE SYSTEMS

@@ -13,7 +13,7 @@ interface NavbarProps {
 }
 
 export function Navbar({
-  designerName = 'WEIYU',
+  designerName = 'VUX',
   statusText = 'AVAILABLE FOR CONTRACTS & AAA',
   availability = 'available',
 }: NavbarProps) {

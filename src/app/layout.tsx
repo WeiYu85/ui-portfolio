@@ -3,10 +3,10 @@ import './globals.css';
 import { AudioSFXProvider } from '@/components/ui/AudioSFXProvider';
 
 export const metadata: Metadata = {
-  title: 'WEIYU — Game UI/UX Designer',
+  title: 'VUX — Game UI/UX Designer',
   description: 'Game UI/UX designer specializing in tactical HUDs, diegetic interfaces, and scalable design systems for PC, console, and mobile titles.',
   keywords: ['Game UI Designer', 'HUD Design', 'Game UX', 'Diegetic UI', 'Game Interface'],
-  authors: [{ name: 'WEIYU' }],
+  authors: [{ name: 'Vux' }],
 };
 
 export default function RootLayout({
