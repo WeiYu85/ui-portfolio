@@ -20,7 +20,7 @@ const SEED_MOCKUPS = {
 export const INITIAL_DATABASE: DatabaseSchema = {
   adminPasswordHash: '$2b$12$ZfE7TVN3YSOqmW7wb6fPa.uXE16m.20oVbNUPmyV.TcQs/9HME7F6',
   "profile": {
-    "name": "Vux",
+    "name": "VUX",
     "callsign": "NEXUS // VUX",
     "title": "Game UI/UX Designer & Interface Specialist",
     "tagline": "Designing Clear Game Interfaces, Tactical HUDs & Player-Focused Systems",
