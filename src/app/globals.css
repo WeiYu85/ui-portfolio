@@ -1,26 +1,259 @@
 @import "tailwindcss";
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg-space: #050813;
+  --bg-surface: #0a1020;
+  --bg-card: rgba(10, 16, 32, 0.85);
+  --border-cyan: rgba(0, 240, 255, 0.3);
+  --border-cyan-bright: #00f0ff;
+  --color-cyan: #00f0ff;
+  --color-emerald: #00ff88;
+  --color-amber: #ffb800;
+  --color-purple: #a855f7;
+  --color-crimson: #ff3366;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  background-color: var(--bg-space);
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(0, 240, 255, 0.08), transparent 28rem),
+    radial-gradient(circle at 84% 42%, rgba(0, 255, 136, 0.045), transparent 24rem),
+    radial-gradient(ellipse at 50% 16%, rgba(18, 65, 115, 0.18), transparent 48%),
+    radial-gradient(ellipse at 50% 100%, rgba(0, 240, 255, 0.05), transparent 42%),
+    linear-gradient(180deg, rgba(0, 240, 255, 0.035), transparent 24rem),
+    linear-gradient(rgba(0, 240, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.025) 1px, transparent 1px);
+  background-size: auto, auto, auto, auto, auto, 72px 72px, 72px 72px;
+  background-attachment: fixed;
+  background-blend-mode: screen, screen, screen, screen, normal, normal, normal;
+  color: #f8fafc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #00f0ff;
+  selection-color: #000000;
+}
+
+img,
+canvas,
+svg,
+video {
+  max-width: 100%;
+}
+
+canvas {
+  display: block;
+}
+
+.font-display {
+  font-family: Bahnschrift, 'Arial Narrow', 'Segoe UI', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.site-atmosphere {
+  background: transparent;
+}
+
+.site-atmosphere > section {
+  position: relative;
+}
+
+.site-atmosphere > section + section::before {
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  content: '';
+  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.28), rgba(0, 255, 136, 0.18), transparent);
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.18);
+}
+
+body::after {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  content: '';
+  opacity: 0.035;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.16) 0,
+    rgba(255, 255, 255, 0.16) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+}
+
+::selection {
+  background-color: #00f0ff;
+  color: #000000;
+}
+
+/* Custom Cyberpunk & Game UI Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050813;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}
+
+/* Subtle Game HUD Scanlines Effect */
+.hud-scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.25)
+  );
+  background-size: 100% 4px;
+}
+
+/* Holographic Grid Background */
+.bg-holo-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Angled Game UI Clip Paths */
+.clip-corner-tl-br {
+  clip-path: polygon(
+    14px 0%,
+    100% 0%,
+    100% calc(100% - 14px),
+    calc(100% - 14px) 100%,
+    0% 100%,
+    0% 14px
+  );
+}
+
+.clip-corner-cut {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 12px) 0,
+    100% 12px,
+    100% 100%,
+    12px 100%,
+    0 calc(100% - 12px)
+  );
+}
+
+.clip-btn {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 8px) 0,
+    100% 8px,
+    100% 100%,
+    8px 100%,
+    0 calc(100% - 8px)
+  );
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.25), inset 0 0 10px rgba(0, 240, 255, 0.1);
+}
+
+.glow-cyan-sm {
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.25);
+}
+
+.glow-amber {
+  box-shadow: 0 0 15px rgba(255, 184, 0, 0.25);
+}
+
+.glow-purple {
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.25);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.6), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.text-glow-emerald {
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+}
+
+.text-glow-amber {
+  text-shadow: 0 0 10px rgba(255, 184, 0, 0.6);
+}
+
+/* Glassmorphism Surface */
+.glass-panel {
+  background: rgba(10, 16, 32, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 240, 255, 0.18);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(14, 23, 46, 0.9);
+  border-color: rgba(0, 240, 255, 0.5);
+  box-shadow: 0 8px 30px rgba(0, 240, 255, 0.15);
+}
+
+/* Keyframe Animations */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-radar {
+  animation: radar-sweep 8s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+.animate-scan {
+  animation: scan-line 3s linear infinite;
 }
