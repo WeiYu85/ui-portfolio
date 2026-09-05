@@ -126,7 +126,7 @@ export function ProjectGallery({ initialProjects }: ProjectGalleryProps) {
             GAME UI REPERTOIRE
           </h2>
           <p className="text-slate-400 text-xs sm:text-sm font-mono mt-1.5 max-w-2xl">
-            In-game HUDs, diegetic inventory screens, and multi-frame interface designs. Filter by platform below.
+            Explore a selection of my in-game HUDs and multi-frame interface designs, organized by platform. This collection highlights some of my work, but there’s more to explore. Join my Discord to see additional projects and designs.
           </p>
         </div>
 
